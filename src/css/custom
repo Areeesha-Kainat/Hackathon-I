@@ -1,0 +1,136 @@
+.hero--primary {
+  background: linear-gradient(270deg, #f5f7fa 0%, #c3cfe2 50%, #f5f7fa 100%);
+  color: #333;
+  transition: background-color 0.3s ease;
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(270deg, #242526 0%, #1a1a1a 50%, #242526 100%);
+  color: #f5f5f5;
+  transition: background-color 0.3s ease;
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #290630;
+  --ifm-color-primary-dark: #290630;
+  --ifm-color-primary-darker: #290630;
+  --ifm-color-primary-darkest: #290630;
+  --ifm-color-primary-light: #290630;
+  --ifm-color-primary-lighter: #290630;
+  --ifm-color-primary-lightest: #290630;
+
+  --ifm-color-accent-light: #6B1287; /* Lighter shade of the primary accent color */
+  --ifm-color-navbar-hover-light: #198f91; /* Standard blue for navbar hover in light mode */
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-footer-background-color: #1A1A1A; /* Dark black for footer background */
+}
+
+/* Navbar hover/focus effects */
+.navbar__item.navbar__link:hover,
+.navbar__item.navbar__link:focus {
+  color: var(--ifm-color-navbar-hover-light); /* Light blue for text on hover */
+  text-decoration: underline; /* Underline effect */
+  text-decoration-color: var(--ifm-color-navbar-hover-light); /* Underline color */
+}
+
+/* Footer hover/focus effects */
+.footer__link-item {
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.footer__link-item:hover,
+.footer__link-item:focus {
+  color: white; /* Keep the existing text color */
+  text-decoration: underline; /* Add underline back */
+  text-decoration-color: white; /* Underline color */
+  transform: translateY(-2px); /* Slightly less pronounced lift */
+  opacity: 0.8; /* Subtle dimming effect instead of glow */
+}
+
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #27dbde;
+  --ifm-color-primary-dark: #27dbde;
+  --ifm-color-primary-darker: #27dbde;
+  --ifm-color-primary-darkest: #27dbde;
+  --ifm-color-primary-light: #27dbde;
+  --ifm-color-primary-lighter: #27dbde;
+  --ifm-color-primary-lightest: #27dbde;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Navbar hover color in dark mode for all links */
+  .navbar__item.navbar__link:hover,
+    .navbar__item.navbar__link:focus {
+      color: #27dbde; /* A brighter blue for better visibility in dark mode */
+      text-decoration-color: #27dbde; /* Ensure underline is also the brighter blue */
+    }
+  
+    .navbar__title,
+    .navbar__title a {
+      color: white !important;
+    }
+  }
+
+[data-theme='dark'] .hero--primary {
+  background-color: #242526; /* A common dark grey for navbar background */
+  color: white; /* Hero section text color in dark mode */
+}
+
+/* Add modern, high-end visual separation to navbar in dark mode */
+[data-theme='dark'] .navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Larger, softer shadow for elevation */
+}
+
+/* Navbar Logo Styling */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  height: 2rem; /* Adjust as needed */
+  margin-right: 0.5rem; /* Space between logo and title */
+}
+
+/* Ensure title and logo are vertically aligned and well-spaced */
+.navbar__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between logo and title */
+}
+
+.navbar__title img {
+  height: 2em; /* Adjust logo size relative to title font size */
+}
+
+/* Ensure footer has a dark background */
+.footer {
+  background-color: #1A1A1A;
+}
+
